@@ -1,0 +1,123 @@
+name: Go API Demo CI/CD
+
+on:
+  push:
+    paths:
+      - 'projects/go-api-demo/**'
+      - '.github/workflows/go-api-demo.yml'
+  pull_request:
+    paths:
+      - 'projects/go-api-demo/**'
+
+defaults:
+  run:
+    working-directory: projects/go-api-demo
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_USER: taskuser
+          POSTGRES_PASSWORD: taskpass
+          POSTGRES_DB: taskdb_test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+    
+    - name: Cache Go modules
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cache/go-build
+          ~/go/pkg/mod
+        key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-go-
+    
+    - name: Install dependencies
+      run: go mod download
+    
+    - name: Run migrations
+      env:
+        DATABASE_URL: postgres://taskuser:taskpass@localhost:5432/taskdb_test?sslmode=disable
+      run: |
+        go get -u github.com/golang-migrate/migrate/v4/cmd/migrate
+        migrate -path migrations -database "$DATABASE_URL" up
+    
+    - name: Run tests
+      env:
+        DATABASE_URL: postgres://taskuser:taskpass@localhost:5432/taskdb_test?sslmode=disable
+        JWT_SECRET: test-secret
+      run: go test -v -race -coverprofile=coverage.out ./...
+    
+    - name: Upload coverage
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./projects/go-api-demo/coverage.out
+        flags: go-api-demo
+    
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+    
+    - name: Run golangci-lint
+      uses: golangci/golangci-lint-action@v3
+      with:
+        version: latest
+        working-directory: projects/go-api-demo
+        args: --timeout=5m
+    
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: [test, lint]
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+    
+    - name: Build binary
+      run: |
+        CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main ./cmd/api
+    
+    - name: Build Docker image
+      run: |
+        docker build -t go-api-demo:${{ github.sha }} .
+    
+    - name: Save Docker image
+      run: |
+        docker save go-api-demo:${{ github.sha }} | gzip > go-api-demo.tar.gz
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: docker-image
+        path: projects/go-api-demo/go-api-demo.tar.gz

@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yahir Muñoz | Desarrollador Fullstack</title>
-    <meta name="description" content="Yahir Muñoz - Desarrollador Fullstack especializado en SaaS, IA conversacional, Go y React. 2 años de experiencia desarrollando plataformas empresariales.">
-    <meta property="og:title" content="Yahir Muñoz | Fullstack Developer">
-    <meta property="og:description" content="Desarrollador con experiencia en SaaS empresariales, integración de IA y arquitecturas escalables">
+    <title>Yahir Muñoz | Award-Winning Full Stack Developer</title>
+    <meta name="description" content="Yahir Muñoz - 21 y/o Full Stack Developer. CILA Award 2025 Winner for Best PropTech LATAM. Founded MasterBroker.ai and MAIA Reach. Expert in Go, React, Laravel.">
+    <meta property="og:title" content="Yahir Muñoz | Award-Winning Full Stack Developer">
+    <meta property="og:description" content="CILA Award 2025 Winner. Built platforms processing $600K+ annually with 98% infrastructure optimization.">
     <meta property="og:type" content="website">
-    <meta name="keywords" content="desarrollador fullstack, go developer, react developer, php, typescript, chihuahua, mexico, SaaS, AI integration">
+    <meta name="keywords" content="full stack developer, go developer, react developer, laravel, php, typescript, CILA award winner, proptech, SaaS, AI integration">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* [Keep all the CSS exactly the same as before] */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
         :root {
@@ -134,7 +135,6 @@
             border-radius: 3px;
         }
         
-        /* Hero Section */
         .hero {
             display: flex;
             align-items: center;
@@ -224,7 +224,17 @@
             }
         }
         
-        /* Experience Section */
+        .award-badge {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #1a1a1a;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
         .experience-container {
             display: flex;
             flex-direction: column;
@@ -284,7 +294,6 @@
             color: var(--primary);
         }
         
-        /* Skills Section */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -334,7 +343,6 @@
             border-radius: 4px;
         }
         
-        /* Projects Section */
         .projects-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -406,7 +414,6 @@
             color: var(--primary-dark);
         }
         
-        /* Contact Section / Footer */
         footer {
             background-color: var(--dark);
             color: white;
@@ -471,7 +478,6 @@
             margin-top: 1.5rem;
         }
         
-        /* Home Icon */
         .home-icon {
             position: fixed;
             bottom: 2rem;
@@ -495,7 +501,6 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         
-        /* Responsive */
         @media (max-width: 991px) {
             .hero {
                 flex-direction: column-reverse;
@@ -580,11 +585,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#about">Acerca de</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -596,19 +601,23 @@
     <div class="container">
         <section class="hero" id="about">
             <div class="hero-content">
-                <p class="hero-greeting">¡Hola! Soy</p>
+                <p class="hero-greeting">Hello! I'm</p>
                 <h1 class="hero-name">Yahir Muñoz</h1>
-                <p class="hero-title">Desarrollador Fullstack</p>
+                <p class="hero-title">Full Stack Developer | 21 y/o Award Winner</p>
+                <div class="award-badge">
+                    🏆 CILA Award 2025 - Best PropTech LATAM
+                </div>
                 <p class="hero-description">
-                    Desarrollador Fullstack con 2 años de experiencia liderando el desarrollo de plataformas SaaS empresariales. 
-                    Especializado en integración de IA conversacional (Claude, ElevenLabs), arquitecturas escalables y migración 
-                    de sistemas legacy. He desarrollado desde cero MasterBroker.ai (PropTech) y MAIA Reach (Sales Automation), 
-                    ambas actualmente en producción manejando cientos de usuarios y miles de transacciones mensuales.
+                    21-year-old Full Stack Developer with 3.5 years building enterprise SaaS platforms. 
+                    Founded MasterBroker.ai, winner of "Best PropTech LATAM 2025" at CILA Awards - competing 
+                    directly with Zillow in Latin American markets. Also built MAIA Reach, an AI platform handling 
+                    100,000+ concurrent operations on $25/month infrastructure (98% cost reduction). 
+                    Expert in Laravel, React, and Go with proven track record of $600K+ annual transaction processing.
                 </p>
                 <div class="btn-group">
-                    <a href="#contact" class="btn">Contáctame <i class="fas fa-arrow-right"></i></a>
-                    <a href="cv-yahir-munoz.pdf" download class="btn" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-                        <i class="fas fa-download"></i> Descargar CV
+                    <a href="#contact" class="btn">Contact Me <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://linkedin.com/in/yahirmunoz" target="_blank" class="btn" style="background: linear-gradient(135deg, #0077B5, #00A0DC);">
+                        <i class="fab fa-linkedin"></i> LinkedIn Profile
                     </a>
                 </div>
             </div>
@@ -621,86 +630,95 @@
         </section>
         
         <section id="experience">
-            <h2 class="section-title">Experiencia Profesional</h2>
+            <h2 class="section-title">Professional Experience</h2>
             <div class="experience-container">
                 <div class="experience-card">
                     <div class="experience-header">
-                        <h3>Desarrollador Fullstack</h3>
-                        <span class="company">ZENOVA DIGITAL</span>
-                        <span class="date">Enero 2024 - Presente</span>
+                        <h3>Technical Lead & Founding Developer</h3>
+                        <span class="company">DIGITAL ZENOVA</span>
+                        <span class="date">May 2023 - Present</span>
                     </div>
                     <ul class="experience-list">
-                        <li>Lideré desarrollo de MasterBroker.ai desde cero, plataforma SaaS inmobiliaria con IA integrada</li>
-                        <li>Desarrollé MAIA Reach, sistema de automatización de ventas con capacidad de 200 usuarios concurrentes</li>
-                        <li>Integré 10+ APIs externas (Stripe, Twilio, Claude AI, ElevenLabs, Google APIs)</li>
-                        <li>Migré arquitectura de PHP a Go (Fiber framework) mejorando performance 40%</li>
-                        <li>Implementé WebSockets para actualizaciones en tiempo real y Progressive Web Apps</li>
+                        <li>Founded MasterBroker.ai from scratch - CILA Award 2025 Winner for Best PropTech LATAM</li>
+                        <li>Built MAIA Reach handling 100K+ concurrent AI calls on $25/month infrastructure</li>
+                        <li>Reduced infrastructure costs by 98% through Go optimizations ($2000 → $25/month)</li>
+                        <li>Processing $600K+ annually across both platforms with 99.9% uptime</li>
+                        <li>Integrated 15+ APIs including Stripe, Twilio, OpenAI, ElevenLabs, Google APIs</li>
+                        <li>Currently mentoring 2 junior developers while maintaining full technical ownership</li>
                     </ul>
                 </div>
                 
                 <div class="experience-card">
                     <div class="experience-header">
-                        <h3>Desarrollador Backend Junior</h3>
-                        <span class="company">DESARROLLADORA V4</span>
-                        <span class="date">Junio 2023 - Diciembre 2023</span>
+                        <h3>Freelance Full Stack Developer</h3>
+                        <span class="company">SELF-EMPLOYED</span>
+                        <span class="date">January 2022 - May 2023</span>
                     </div>
                     <ul class="experience-list">
-                        <li>Desarrollo y mantenimiento de APIs RESTful en PHP</li>
-                        <li>Optimización de consultas SQL mejorando tiempos de respuesta 30%</li>
-                        <li>Implementación de nuevas funcionalidades según requerimientos</li>
-                        <li>Colaboración en equipo usando metodología Agile/Scrum</li>
+                        <li>Delivered 5+ production projects for international clients</li>
+                        <li>E-commerce platform scaling from 0 to 1,000+ monthly orders</li>
+                        <li>Developed custom CRM systems and landing pages</li>
+                        <li>Learned new technologies on-demand to meet client requirements</li>
                     </ul>
                 </div>
             </div>
         </section>
         
         <section id="skills">
-            <h2 class="section-title">Habilidades Técnicas</h2>
+            <h2 class="section-title">Technical Skills</h2>
             <div class="skills-container">
                 <div class="skill-card">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="Go" class="skill-icon">
-                    <h3 class="skill-name">Go</h3>
-                    <p>Backend de alto rendimiento</p>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel" class="skill-icon">
+                    <h3 class="skill-name">Laravel</h3>
+                    <p>Primary Backend Framework</p>
                     <div class="skill-level">
-                        <div class="skill-progress" style="width: 75%;"></div>
+                        <div class="skill-progress" style="width: 95%;"></div>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-icon">
-                    <h3 class="skill-name">React</h3>
-                    <p>Interfaces de usuario</p>
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="Go" class="skill-icon">
+                    <h3 class="skill-name">Go</h3>
+                    <p>High-performance Backend</p>
                     <div class="skill-level">
                         <div class="skill-progress" style="width: 85%;"></div>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="skill-icon">
-                    <h3 class="skill-name">TypeScript</h3>
-                    <p>JavaScript tipado</p>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-icon">
-                    <h3 class="skill-name">PHP 8.3</h3>
-                    <p>Desarrollo backend</p>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-icon">
+                    <h3 class="skill-name">React 18</h3>
+                    <p>Frontend Framework</p>
                     <div class="skill-level">
                         <div class="skill-progress" style="width: 90%;"></div>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="skill-icon">
-                    <h3 class="skill-name">PostgreSQL</h3>
-                    <p>Base de datos</p>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="skill-icon">
+                    <h3 class="skill-name">TypeScript</h3>
+                    <p>Type-safe JavaScript</p>
                     <div class="skill-level">
                         <div class="skill-progress" style="width: 85%;"></div>
                     </div>
                 </div>
                 <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-icon">
+                    <h3 class="skill-name">PHP 8.3</h3>
+                    <p>Backend Development</p>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="skill-icon">
+                    <h3 class="skill-name">PostgreSQL</h3>
+                    <p>Primary Database</p>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon">
-                    <h3 class="skill-name">MySQL/MariaDB</h3>
-                    <p>Bases de datos</p>
+                    <h3 class="skill-name">MySQL</h3>
+                    <p>Database Management</p>
                     <div class="skill-level">
                         <div class="skill-progress" style="width: 90%;"></div>
                     </div>
@@ -708,78 +726,52 @@
                 <div class="skill-card">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" class="skill-icon">
                     <h3 class="skill-name">Redis</h3>
-                    <p>Cache y colas</p>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 70%;"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-icon">
-                    <h3 class="skill-name">Docker</h3>
-                    <p>Containerización</p>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 75%;"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-icon">
-                    <h3 class="skill-name">Node.js</h3>
-                    <p>JavaScript backend</p>
+                    <p>Caching & Queues</p>
                     <div class="skill-level">
                         <div class="skill-progress" style="width: 80%;"></div>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS" class="skill-icon">
-                    <h3 class="skill-name">Tailwind CSS</h3>
-                    <p>Framework CSS</p>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon">
-                    <h3 class="skill-name">Git</h3>
-                    <p>Control de versiones</p>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-icon">
+                    <h3 class="skill-name">Docker</h3>
+                    <p>Containerization</p>
                     <div class="skill-level">
                         <div class="skill-progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
-                    <h3 class="skill-name">JavaScript ES6+</h3>
-                    <p>Frontend y backend</p>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 90%;"></div>
                     </div>
                 </div>
             </div>
         </section>
         
         <section id="projects">
-            <h2 class="section-title">Proyectos Destacados</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="projects-container">
                 <div class="project-card">
-                    <div style="height: 200px; display: flex; justify-content: center; align-items: center; background-color: #f3f4f6; padding: 20px; overflow: hidden;">
-                        <img src="https://www.masterbroker.ai/assets/img/master-completo.png" alt="Logo Master Broker" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+                    <div style="height: 200px; display: flex; justify-content: center; align-items: center; background: linear-gradient(135deg, #FFD700, #FFA500); padding: 20px; overflow: hidden;">
+                        <img src="https://www.masterbroker.ai/assets/img/master-completo.png" alt="MasterBroker Logo" style="max-width: 90%; max-height: 90%; object-fit: contain;">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">MasterBroker.ai</h3>
+                        <h3 class="project-title">
+                            MasterBroker.ai 
+                            <span style="background: #FFD700; color: #1a1a1a; padding: 2px 8px; border-radius: 4px; font-size: 0.7em; margin-left: 8px;">
+                                🏆 CILA Winner
+                            </span>
+                        </h3>
                         <div class="project-tags">
-                            <span class="tag">PHP 8.3</span>
+                            <span class="tag">Laravel</span>
                             <span class="tag">React</span>
-                            <span class="tag">MariaDB</span>
-                            <span class="tag">Claude AI</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">OpenAI</span>
                             <span class="tag">Stripe</span>
-                            <span class="tag">Twilio</span>
-                            <span class="tag">Docker</span>
+                            <span class="tag">PWA</span>
                         </div>
                         <p class="project-description">
-                            Plataforma SaaS inmobiliaria con IA conversacional. Sistema completo con CRM integrado, 
-                            gestión de propiedades, generación automática de reportes PDF, marketing automatizado 
-                            y chatbot inteligente. Procesa 1000+ leads mensuales y gestiona 100+ agentes activos.
+                            Winner of "Best PropTech LATAM 2025" at CILA Awards. Direct competitor to Zillow 
+                            in Latin American markets. Processing $600K+ annually with 50,000+ properties, 
+                            AI-powered search in Spanish, and multi-tenant architecture supporting 100+ agencies.
                         </p>
-                        <a href="https://www.masterbroker.ai" class="project-link" target="_blank">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://www.masterbroker.ai" class="project-link" target="_blank">
+                            View Live Project <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
                 
@@ -799,33 +791,13 @@
                             <span class="tag">WebSockets</span>
                         </div>
                         <p class="project-description">
-                            Plataforma de automatización de ventas con IA conversacional. Sistema de llamadas 
-                            telefónicas automatizadas capaz de manejar 20+ llamadas simultáneas. Incluye PWA, 
-                            dashboard en tiempo real y migración exitosa de PHP a Go con mejora de 40% en performance.
+                            Enterprise AI conversation platform handling 100,000+ concurrent calls on $25/month 
+                            infrastructure (4000x more efficient than standard cloud). Successfully migrated from 
+                            PHP to Go achieving 40% performance improvement and sub-millisecond response times.
                         </p>
-                        <a href="#" class="project-link">Ver demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div style="height: 200px; display: flex; justify-content: center; align-items: center; background-color: #f3f4f6;">
-                        <i class="fas fa-home fa-5x" style="color: var(--primary);"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Landing Pages Inmobiliarias</h3>
-                        <div class="project-tags">
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">Tailwind CSS</span>
-                            <span class="tag">Google Analytics</span>
-                        </div>
-                        <p class="project-description">
-                            Desarrollo de múltiples landing pages de alto rendimiento con integración de Píxeles 
-                            de Facebook, Google Analytics y formularios con almacenamiento dual en Google Sheets 
-                            y MySQL. Optimizadas para conversión y SEO.
-                        </p>
-                        <a href="#" class="project-link">Ver ejemplos <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://maiareach.com" class="project-link" target="_blank">
+                            View Demo <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -834,26 +806,23 @@
     
     <footer id="contact">
         <div class="footer-content">
-            <h2 class="footer-title">Contacto</h2>
+            <h2 class="footer-title">Let's Connect</h2>
             <div class="contact-links">
-                <a href="mailto:tu-email@gmail.com">
-                    <i class="fas fa-envelope"></i> tu-email@gmail.com
+                <a href="mailto:yahirmunox12@gmail.com">
+                    <i class="fas fa-envelope"></i> yahirmunox12@gmail.com
                 </a>
-                <a href="tel:+52614XXXXXXX">
-                    <i class="fas fa-phone"></i> 614-XXX-XXXX
+                <a href="tel:+526275212537">
+                    <i class="fas fa-phone"></i> +52 627 521 2537
                 </a>
-                <a href="https://linkedin.com/in/tu-perfil" target="_blank">
+                <a href="https://linkedin.com/in/yahirmunoz" target="_blank">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
-                <a href="https://github.com/tu-usuario" target="_blank">
+                <a href="https://github.com/Malex1718" target="_blank">
                     <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="cv-yahir-munoz.pdf" download>
-                    <i class="fas fa-file-pdf"></i> Descargar CV
                 </a>
             </div>
             <p style="margin-top: 2rem; opacity: 0.7;">
-                © 2025 Yahir Muñoz. Desarrollador Fullstack en Chihuahua, México.
+                © 2025 Yahir Muñoz | 21 y/o Award-Winning Full Stack Developer | Chihuahua, México
             </p>
         </div>
     </footer>
@@ -894,14 +863,16 @@
         
         // Easter egg for recruiters
         console.log(`
-        🚀 ¡Hola reclutador curioso!
+        🚀 Hey there, curious recruiter!
         
-        📧 Contáctame: tu-email@gmail.com
-        💼 Busco nuevos retos en desarrollo
-        🛠️ Stack: Go, React, TypeScript, PHP, PostgreSQL
-        🌟 Proyectos: MasterBroker.ai, MAIA Reach
+        📧 Contact: yahirmunox12@gmail.com
+        🏆 CILA Award 2025 Winner - Best PropTech LATAM
+        💼 Looking for new challenges in Full Stack Development
+        🛠️ Stack: Laravel, Go, React, TypeScript, PostgreSQL
+        🌟 Projects: MasterBroker.ai (Zillow competitor), MAIA Reach
+        💪 21 years old with 3.5 years of production experience
         
-        Si estás viendo esto, definitivamente deberíamos hablar 😊
+        If you're seeing this, we should definitely talk 😊
         `);
     </script>
 </body>
